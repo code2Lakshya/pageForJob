@@ -1,0 +1,360 @@
+/* universal styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #2F1893;
+    --text-color: #FFFFFF;
+    --btn-color: #E93A7D;
+    --text-color2: #1E0E62;
+    --text-color3: #15143966;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.29px;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 18px;
+    font-family: 500;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav ul li:nth-child(1) {
+    color: rgb(155, 153, 153)
+}
+
+nav ul li:last-child {
+    width: 120px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--btn-color);
+    user-select: none;
+    cursor: pointer;
+}
+#menu,
+#cross{
+    display: none;
+}
+
+/* Hero Section Styling */
+
+#hero-section {
+    width: 100%;
+    max-width: 1000px;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+#hero-left {
+    width: calc(50% - 35px);
+    max-width: 427px;
+}
+
+#hero-left h1 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: -1px;
+}
+
+#hero-left p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#hero-left button {
+    width: 157px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--btn-color);
+    border-radius: 100px;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:active {
+    transform: scale(0.95);
+    transition: transform 0.3s;
+}
+
+/* Singup form styling */
+
+#right {
+    width: calc(50% - 35px);
+    max-width: 479px;
+    background-color: var(--text-color);
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    border-radius: 15px;
+    padding: 15px;
+}
+#right h1{
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+    color:var(--text-color2);
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    width: 100%;
+}
+form input{
+    width: 100%;
+    max-width: 330px;
+    height: 60px;
+    border-radius: 100px;
+    color: var(--text-color3);
+    border: 1px solid var(--text-color3);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    padding: 24px;
+    outline: none;
+}
+form div{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    width: 100%;
+    max-width: 330px;
+    margin-left: 10px;
+}
+input::placeholder{
+    color: var(--text-color3);
+}
+input[type='checkbox']{
+  all:unset;
+  display: inline-block;
+  width: 24px;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--text-color3);
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+}
+input[type='checkbox']:checked{
+    background-color: #25DAC5;
+}
+input[type='checkbox']:checked::before{
+    content:'✔️';
+    position: absolute;
+    color:var(--text-color2);
+    font-size: 15px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+form label{
+    font-size: 16px;
+    font-weight: 400;
+    color: #15143966;
+}
+.footer-btn{
+    margin-top: 15px;
+    width: 100%;
+    max-width: 330px;
+    height:50px;
+    border-radius: 100px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+}
+form button{
+    background-color: #482BE7;
+}
+#footer{
+    width: 100%;
+    max-width: 330px;
+    color: var(--text-color3);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer span{
+    display: inline-block;
+    width: 45%;
+    border: 1px solid var(--text-color3);
+}
+#login{
+    background-color: #1DA1F2;
+}
+#hero-footer{
+    width: 100%;
+    max-width: 330px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    gap:7px;
+}
+#hero-footer p{
+    color: var(--text-color3);
+}
+#hero-footer a{
+    color: #25DAC5;
+    text-decoration: none;
+    cursor: pointer;
+}
+#hero-footer a:hover{
+    text-decoration: underline;
+}
+
+/* Tabelet media querries */
+
+@media screen and (max-width: 745px){
+ nav h1{
+    font-size: 21px;
+ }
+ nav ul,
+ #hero-left button,
+ form div label{
+    font-size: 15px;
+ }
+ #hero-section{
+    gap:8px;
+ }
+ #hero-left,
+ #hero-right{
+    width: calc(50% - 20px);
+ }
+ #hero-left h1{
+    font-size: 50px;
+ }
+ #hero-left p{
+    font-size: 16px;
+ }
+#hero-left button{
+    width: 130px;
+    height: 45px;
+}
+#right{
+    height: unset;
+    padding-block: 30px;
+}
+#right h1{
+    font-size: 35px;
+}
+form input{
+    height: 45px;
+    font-size: 15px;
+}
+input[type='checkbox']{
+    width: 15px;
+    aspect-ratio: 1/1;
+}
+input[type='checkbox']:checked::before{
+    font-size: 12px;
+}
+.footer-btn{
+    height: 45px;
+    font-size: 15px;
+}
+#hero-footer{
+    font-size: 15px;
+}
+}
+
+@media screen and (max-width: 620px){
+#hero-section{
+    flex-direction: column;
+}
+#hero-left{
+    width: 100%;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-block: 50px;
+}
+#right{
+    width: 100%;
+    margin-bottom: 50px;
+}
+#menu,
+#cross{
+    display:inline-flex;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    position: fixed;
+    flex-direction: column;
+    width: 100vw;
+    height:100vh;
+    background-color: black;
+    top:0;
+    left: 0;
+    justify-content: center;
+    gap:30px;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+#cross{
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+}
