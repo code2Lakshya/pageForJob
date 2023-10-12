@@ -45,8 +45,8 @@ nav ul {
     align-items: center;
 }
 
-nav ul li:nth-child(1) {
-    color: rgb(155, 153, 153)
+nav ul li:nth-child(2) {
+    color: rgb(155, 153, 153);
 }
 
 nav ul li:last-child {
